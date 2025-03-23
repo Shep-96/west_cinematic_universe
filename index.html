@@ -59,14 +59,14 @@
             z-index: 1040;
             width: 100vw;
             height: 100vh;
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='1.5' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(%23noise)' fill='white' /></svg>");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='15' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(%23noise)' fill='white' /></svg>");
             background-position: 0% 0%; 
             opacity: 0.3;
             background-size: 100% 100%;
             pointer-events: none;
         }
 
-        .scratch-overlay {
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -256,20 +256,17 @@
 
       </div>
   </div>
-
-  <div class="grain-overlay"></div>
   
-  <svg class="scratch-overlay" id="canvas" xmlns='http://www.w3.org/2000/svg'></svg>
+  <svg class="overlay" id="canvas" xmlns='http://www.w3.org/2000/svg'>
+
+    <filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='15' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(#noise)' fill='white' />
+  </svg>
 
   <script>
-    window.onload = function() {
-        // Dynamically set the overlay's height to match the content's height
-        const scratch_overlay = document.querySelector('.scratch-overlay');
-        scratch_overlay.style.height = document.documentElement.scrollHeight + 'px';
-
-        const grain_overlay = document.querySelector('.grain-overlay');
-        grain_overlay.style.height = document.documentElement.scrollHeight + 'px';
-    };
+    // Dynamically set the overlay's height to match the content's height
+    const overlay = document.querySelector('.overlay');
+    overlay.style.height = document.documentElement.scrollHeight + 'px';
+    
   </script>
 
 
@@ -323,7 +320,7 @@
 
     <script>
 
-        const wiggleMagnitude = 0.3;
+        const wiggleMagnitude = 0.8;
 
         function randomTranslate(element) {
             const randomX = Math.floor(Math.random() * (wiggleMagnitude*2)) - wiggleMagnitude; // Random value between -10 and 10
