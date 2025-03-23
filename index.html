@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The West Cinematic Universe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        :root {
+            --color-film-frame: #000000;
+            --color-film-perfs: white;
+            --color-film-background: rgb(var(--bs-dark-rgb)) !important;
+            --film-width: 3vw;
+        }
+
+        body {
+            background: repeating-linear-gradient(
+                0deg,
+                var(--color-film-frame) 0,
+                var(--color-film-frame) var(--film-width),
+                var(--color-film-perfs) var(--film-width),
+                var(--color-film-perfs) calc(var(--film-width) * 2)
+            );
+        }
+
+        .film-outer {
+            position: relative;
+            border-left: var(--film-width) var(--color-film-frame) solid;
+            border-right: var(--film-width) var(--color-film-frame) solid;
+            height: 100%
+        }
+
+        .film-inner {
+            margin-left: var(--film-width);
+            margin-right: var(--film-width);
+            background-color: var(--color-film-frame);
+        }
+
+        .frame {
+            background-color: var(--color-film-background);
+            border-top: var(--film-width) var(--color-film-frame) solid;
+            border-bottom: var(--film-width) var(--color-film-frame) solid;
+            border-left: var(--film-width) var(--color-film-frame) solid;
+            border-right: var(--film-width) var(--color-film-frame) solid;
+            /* aspect-ratio: 1.85/1; */
+            padding:2%;
+            border-radius: calc(var(--film-width) * 1.5);
+            color:white;
+        }
+
+        .poster {
+            border-radius: var(--bs-border-radius) !important;
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1040;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='15' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(%23noise)' fill='white' /></svg>");
+            background-position: 0% 0%; 
+            opacity: 0.3;
+            background-size: 100% 100%;
+            pointer-events: none;
+        }
+
+        .scratch-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Initial height */
+            z-index: 1000;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="film-outer">
+      <div class="film-inner wiggle">
+
+          <div class="frame" style="height: 90vh;">
+              <div class="row h-100 align-items-center">
+                  <div class="col-12">
+                      <h1 class="text-center"><strong>The (Jess) West Cinematic Universe</strong></h1>
+                      <p class="text-center">The top 10 most popular movies with 'West' in the title, according to IMDB</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/sm/upload/vz/7i/ka/ys/6ED4Wr2vgOc7yPiXIqovwLiQfCl-0-2000-0-3000-crop.jpg?v=3da900f744">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/sm/upload/vz/7i/ka/ys/6ED4Wr2vgOc7yPiXIqovwLiQfCl-0-2000-0-3000-crop.jpg?v=3da900f744">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/once-upon-a-time-in-the-west/"><h1 class="title">Once Upon a Time in the West</h1></a>
+                      <h3>1968 <small>Dir.</small> Sergio Leone</h3>
+                      <p>As the railroad builders advance unstoppably through the Arizona desert on their way to the sea, Jill arrives in the small town of Flagstone with the intention of starting a new life.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/film-poster/5/1/8/4/3/51843-north-by-northwest-0-2000-0-3000-crop.jpg?v=b7064eeb7d">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/film-poster/5/1/8/4/3/51843-north-by-northwest-0-2000-0-3000-crop.jpg?v=b7064eeb7d">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/north-by-northwest/"><h1 class="title">North by Northwest</h1></a>
+                      <h3>1959 <small>Dir.</small> Alfred Hitchcock</h3>
+                      <p>Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/sm/upload/em/vs/66/tb/zRQhCSREdR9h4OzEVvwhdlZNZ6m-0-2000-0-3000-crop.jpg?v=60c3df64d6">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/sm/upload/em/vs/66/tb/zRQhCSREdR9h4OzEVvwhdlZNZ6m-0-2000-0-3000-crop.jpg?v=60c3df64d6">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/west-side-story/"><h1 class="title">West Side Story</h1></a>
+                      <h3>1961 <small>Dir.</small> Jerome Robbins, Robert Wise</h3>
+                      <p>In the slums of the upper West Side of Manhattan, tensions are high as a gang of Polish-Americans compete against a gang of recently immigrated Puerto Ricans, but this doesn’t stop two romantics from each gang falling in love.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/sm/upload/pm/hn/wh/hh/uqoluoavY8US144kUu9lb4mZpD-0-2000-0-3000-crop.jpg?v=08a4eb4700">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/sm/upload/pm/hn/wh/hh/uqoluoavY8US144kUu9lb4mZpD-0-2000-0-3000-crop.jpg?v=08a4eb4700">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/wild-wild-west/"><h1 class="title">Wild Wild West</h1></a>
+                      <h3>1999 <small>Dir.</small> Barry Sonnenfeld</h3>
+                      <p>Legless Southern inventor Dr. Arliss Loveless plans to rekindle the Civil War by assassinating President U.S. Grant. Only two men can stop him: gunfighter James West and master-of-disguise and inventor Artemus Gordon. The two must team up to thwart Loveless’ plans.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/film-poster/1/3/5/7/5/1/135751-a-million-ways-to-die-in-the-west-0-2000-0-3000-crop.jpg?v=408b69486e">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/film-poster/1/3/5/7/5/1/135751-a-million-ways-to-die-in-the-west-0-2000-0-3000-crop.jpg?v=408b69486e">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/a-million-ways-to-die-in-the-west/"><h1 class="title">A Million Ways to Die in the West</h1></a>
+                      <h3>2014 <small>Dir.</small> Seth MacFarlane</h3>
+                      <p>As a cowardly farmer begins to fall for the mysterious new woman in town, he must put his new-found courage to the test when her husband, a notorious gun-slinger, announces his arrival.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/film-poster/4/4/9/0/9/44909-how-the-west-was-won-0-2000-0-3000-crop.jpg?v=11fda3a9d0">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/film-poster/4/4/9/0/9/44909-how-the-west-was-won-0-2000-0-3000-crop.jpg?v=11fda3a9d0">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/how-the-west-was-won/"><h1 class="title">How the West Was Won</h1></a>
+                      <h3>1962 <small>Dir.</small> John Ford, Henry Hathaway, George Marshall</h3>
+                      <p>The epic tale of the development of the American West from the 1830s through the Civil War to the end of the century, as seen through the eyes of one pioneer family.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/sm/upload/te/ll/jj/tm/3LEyW11onDltXHo0L1X23j9Nnvg-0-2000-0-3000-crop.jpg?v=3c881777e6">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/sm/upload/te/ll/jj/tm/3LEyW11onDltXHo0L1X23j9Nnvg-0-2000-0-3000-crop.jpg?v=3c881777e6">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/ingrid-goes-west/"><h1 class="title">Ingrid Goes West</h1></a>
+                      <h3>2017 <small>Dir.</small> Matt Spicer</h3>
+                      <p>Ingrid becomes obsessed with a social network star named Taylor Sloane who seemingly has a perfect life. But when Ingrid decides to drop everything and move west to be Taylor’s friend, her behaviour turns unsettling and dangerous.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/film-poster/4/6/2/4/0/46240-red-rock-west-0-2000-0-3000-crop.jpg?v=de37b4bf85">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/film-poster/4/6/2/4/0/46240-red-rock-west-0-2000-0-3000-crop.jpg?v=de37b4bf85">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/escort-west/"><h1 class="title">Red Rock West</h1></a>
+                      <h3>1993 <small>Dir.</small> John Dahl</h3>
+                      <p>When a promised job for Texan Michael fails to materialize in Wyoming, Mike is mistaken by Wayne to be the hitman he hired to kill his unfaithful wife, Suzanne. Mike takes full advantage of the situation, collects the money, and runs. During his getaway, things go wrong, and soon get worse when he runs into the real hitman, Lyle.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/film-poster/2/7/1/6/2716-escort-west-0-2000-0-3000-crop.jpg?v=a4783df867">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/film-poster/2/7/1/6/2716-escort-west-0-2000-0-3000-crop.jpg?v=a4783df867">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/escort-west/"><h1 class="title">Escort West</h1></a>
+                      <h3>1959 <small>Dir.</small> Francis D. Lyon</h3>
+                      <p>Seeking a new place to call home, former Confederate soldier Ben Lassiter (Victor Mature) and his daughter meet Beth (Elaine Stewart), whose fiancé is a Union soldier. Lassiter falls for Beth, and when Indians attack, they head to a cavalry camp where Lassiter must battle the Indians as well as Beth’s fiancé.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="frame">
+              <div class="row">
+                  <div class="col-xl-2 col-lg-2 col-md-5 col-sm-5 col-xs-12">
+                      <a href="https://a.ltrbxd.com/resized/film-poster/4/6/2/8/5/46285-an-american-tail-fievel-goes-west-0-2000-0-3000-crop.jpg?v=f59f973541">
+                          <img class="poster img-fluid" src="https://a.ltrbxd.com/resized/film-poster/4/6/2/8/5/46285-an-american-tail-fievel-goes-west-0-2000-0-3000-crop.jpg?v=f59f973541">
+                      </a>
+                  </div>
+                  <div class="col-xl-10 col-lg-10 col-md-7 col-sm-7 col-xs-12">
+                      <a href="https://letterboxd.com/film/an-american-tail-fievel-goes-west/"><h1 class="title">An American Tail: Fievel Goes West</h1></a>
+                      <h3>1991 <small>Dir.</small> Phil Nibbelink, Simon Wells</h3>
+                      <p>Some time after the Mousekewitz’s have settled in America, they find that they are still having problems with the threat of cats. That makes them eager to try another home out in the west, where they are promised that mice and cats live in peace. Unfortunately, the one making this claim is an oily con artist named Cat R. Waul who is intent on his own sinister plan.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="frame text-white" style="background-color:var(--color-film-frame)">
+              <div class="row h-100 align-items-center">
+                  <div class="col-12 text-center my-3">
+                      <img class="img-fluid text-center mb-2" style="filter:invert(); max-width:25%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Motion_Picture_Association_Globe_logo.svg/1200px-Motion_Picture_Association_Globe_logo.svg.png">
+                      <h6 class="text-center">Motion Picture Association of America</h6>
+                  </div>
+                  <div class="col-4 px-3 text-center my-3">
+                      <img class="img-fluid text-center mb-2" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a309da85-30b9-4aba-86be-a9ababcc8e90/ddsxiic-8dd8345c-0c3d-4ca0-a877-4f2597ed267b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EzMDlkYTg1LTMwYjktNGFiYS04NmJlLWE5YWJhYmNjOGU5MFwvZGRzeGlpYy04ZGQ4MzQ1Yy0wYzNkLTRjYTAtYTg3Ny00ZjI1OTdlZDI2N2IucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yRtHYpVNiamQoV8Ig6p46bYb4URukARd6pqKU1rxsZY">
+                  </div>
+                  <div class="col-4 px-3 text-center">
+                      <img class="img-fluid text-center mb-2" style="filter:invert();" src="https://1000logos.net/wp-content/uploads/2021/05/Dolby-Digital-logo.png">
+                  </div>
+                  <div class="col-4 px-3 text-center">
+                      <img class="img-fluid text-center mb-2" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c45c69b2-249c-40d1-9981-6c7ade872a9a/difaklu-12b0cbc0-f6ee-437e-8d2b-f04f153fbb14.png/v1/fill/w_1280,h_720/technicolor_logo__1990s_2000s___pacific_title__by_jisjhushsbhsjs_difaklu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYzQ1YzY5YjItMjQ5Yy00MGQxLTk5ODEtNmM3YWRlODcyYTlhXC9kaWZha2x1LTEyYjBjYmMwLWY2ZWUtNDM3ZS04ZDJiLWYwNGYxNTNmYmIxNC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.YxtWbfeKrjv25Gf7KSiQoeE4vJv6KCvp2CDzzQdcrg0">
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
+
+  <div class="grain-overlay"></div>
+  
+  <svg class="scratch-overlay" id="canvas" xmlns='http://www.w3.org/2000/svg'></svg>
+
+  <script>
+    // Dynamically set the overlay's height to match the content's height
+    const overlay = document.querySelector('.scratch-overlay');
+    overlay.style.height = document.documentElement.scrollHeight + 'px';
+  </script>
+
+
+    <script>
+        window.onload = function() {
+
+            const canvas = document.getElementById('canvas');
+        
+            const width = canvas.clientWidth;
+            const height = canvas.clientHeight;
+        
+            const numSquiggles = 3;
+            const maxSquiggleSize = width*0.1;
+        
+            function getRandomPoint(maxX, maxY) {
+            return [Math.random() * maxX, Math.random() * maxY];
+            }
+        
+            function generateSquiggle(width, height) {
+            //generate a random central position for the squiggle
+            const [centerX, centerY] = getRandomPoint(width, height);
+        
+            //generate the start point within range of the center
+            const [startX, startY] = [centerX + (Math.random() * maxSquiggleSize) - maxSquiggleSize, centerY + (Math.random() * maxSquiggleSize) - maxSquiggleSize];
+            const [ctrl1X, ctrl1Y] = [centerX + (Math.random() * maxSquiggleSize) - maxSquiggleSize, centerY + (Math.random() * maxSquiggleSize) - maxSquiggleSize];
+            const [ctrl2X, ctrl2Y] = [centerX + (Math.random() * maxSquiggleSize) - maxSquiggleSize, centerY + (Math.random() * maxSquiggleSize) - maxSquiggleSize];
+            const [endX, endY] = [centerX + (Math.random() * maxSquiggleSize) - maxSquiggleSize, centerY + (Math.random() * maxSquiggleSize) - maxSquiggleSize];
+        
+            return `M${startX},${startY} C${ctrl1X},${ctrl1Y} ${ctrl2X},${ctrl2Y} ${endX},${endY}`;
+            }
+        
+            function createSquiggle(width, height) {
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', generateSquiggle(width, height));
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', 'white');
+            path.setAttribute('stroke-width', 3);
+            path.setAttribute('stroke-linecap', 'round');
+            canvas.appendChild(path);
+        
+            setInterval(() => {
+                path.setAttribute('d', generateSquiggle(width, height));
+            }, 41);
+            }
+            
+            for (let i = 0; i < numSquiggles; i++) {
+            createSquiggle(width, height);
+            }
+        };
+    </script>
+
+    <script>
+
+        const wiggleMagnitude = 0.8;
+
+        function randomTranslate(element) {
+            const randomX = Math.floor(Math.random() * (wiggleMagnitude*2)) - wiggleMagnitude; // Random value between -10 and 10
+            const randomY = Math.floor(Math.random() * (wiggleMagnitude*2)) - wiggleMagnitude; // Random value between -10 and 10
+            element.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+
+        function wiggle() {
+            document.querySelectorAll('.wiggle').forEach(element => {
+                randomTranslate(element)
+            });
+        }
+
+        //wiggle elements when scrolling
+        window.addEventListener('scroll', () => {
+            wiggle();
+        });
+
+        //constantly wiggle elements
+        setInterval(wiggle, 41);
+    </script>   
+</body>
+</html>
