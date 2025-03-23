@@ -75,13 +75,14 @@
             z-index: 1000;
             opacity: 0.3;
             pointer-events: none;
+            filter:saturate(0);
         }
 
     </style>
 </head>
 <body>
   <div class="film-outer">
-      <div class="film-inner wiggle">
+      <div class="film-inner">
 
           <div class="frame" style="height: 90vh;">
               <div class="row h-100 align-items-center">
@@ -257,10 +258,10 @@
       </div>
   </div>
   
-  <svg class="overlay" id="canvas" xmlns='http://www.w3.org/2000/svg'>
+  <svg class="overlay" id="canvas" xmlns='http://www.w3.org/2000/svg' width='100' height='100'>
 
     <filter id='noise'>
-        <feTurbulence type='fractalNoise' baseFrequency='0.15' seed='0' numOctaves='3' stitchTiles='stitch'>
+        <feTurbulence type='fractalNoise' baseFrequency='0.015' seed='0' numOctaves='3' stitchTiles='stitch'>
             <animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate>
         </feTurbulence>
     </filter>
