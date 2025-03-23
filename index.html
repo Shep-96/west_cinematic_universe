@@ -59,7 +59,7 @@
             z-index: 1040;
             width: 100vw;
             height: 100vh;
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='1.5' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(%23noise)' fill='white' /></svg>");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='15' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(%23noise)' fill='white' /></svg>");
             background-position: 0% 0%; 
             opacity: 0.3;
             background-size: 100% 100%;
@@ -263,11 +263,11 @@
 
   <script>
     // Dynamically set the overlay's height to match the content's height
-    const overlay = document.querySelector('.scratch-overlay');
-    overlay.style.height = document.documentElement.scrollHeight + 'px';
+    const scratch_overlay = document.querySelector('.scratch-overlay');
+    scratch_overlay.style.height = document.documentElement.scrollHeight + 'px';
 
-    const overlay = document.querySelector('.grain-overlay');
-    overlay.style.height = document.documentElement.scrollHeight + 'px';
+    const grain_overlay = document.querySelector('.grain-overlay');
+    grain_overlay.style.height = document.documentElement.scrollHeight + 'px';
   </script>
 
 
