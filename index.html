@@ -52,20 +52,6 @@
             border-radius: var(--bs-border-radius) !important;
         }
 
-        .grain-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1040;
-            width: 100vw;
-            height: 100vh;
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='15' seed='0' numOctaves='3' stitchTiles='stitch'><animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate></feTurbulence></filter><rect width='100%' height='100%' filter='url(%23noise)' fill='white' /></svg>");
-            background-position: 0% 0%; 
-            opacity: 0.3;
-            background-size: 100% 100%;
-            pointer-events: none;
-        }
-
         .overlay {
             position: absolute;
             top: 0;
@@ -261,7 +247,7 @@
   <svg class="overlay" id="canvas" xmlns='http://www.w3.org/2000/svg' width='100' height='100'>
 
     <filter id='noise'>
-        <feTurbulence type='fractalNoise' baseFrequency='0.015' seed='0' numOctaves='3' stitchTiles='stitch'>
+        <feTurbulence type='fractalNoise' baseFrequency='0.6' seed='0' numOctaves='3' stitchTiles='stitch'>
             <animate id='noiseAnimate' attributeName='seed' attributeType='XML' values='10;150;10' begin='0s' dur='10s' repeatCount='indefinite'></animate>
         </feTurbulence>
     </filter>
