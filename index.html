@@ -244,7 +244,7 @@
       </div>
   </div>
   
-  <svg class="overlay" id="canvas" xmlns='http://www.w3.org/2000/svg' width='100' height='100'>
+  <svg class="overlay" id="canvas" xmlns='http://www.w3.org/2000/svg'>
 
     <filter id='noise'>
         <feTurbulence type='fractalNoise' baseFrequency='1' seed='0' numOctaves='3' stitchTiles='stitch'>
@@ -254,12 +254,6 @@
     <rect width='100%' height='100%' filter='url(#noise)' fill='white' />
   </svg>
 
-  <script>
-    // Dynamically set the overlay's height to match the content's height
-    const overlay = document.querySelector('.overlay');
-    overlay.style.height = document.documentElement.scrollHeight + 'px';
-    
-  </script>
 
 
     <script>
